@@ -3,7 +3,9 @@ var count = 0;
 function run(){
     var elm = document.getElementById('listLog');
     elm.innerHTML = '';
-    
+    var tbody = document.getElementById('table-body');
+    tbody.innerHTML = '';
+
     var egg = +document.getElementById("inputEggs").value;
     var end = +document.getElementById("inputFloor").value;
     var ans = +document.getElementById("inputAns").value;
@@ -42,9 +44,24 @@ function linear(start, end, ans, egg) {
 }
 
 function logTests(start, end, ans, egg, count) {
-    var elm = document.getElementById('listLog');    
-    var chld = document.createElement('li');
-    chld.setAttribute('class','list-group-item');
-    chld.innerHTML = `start- ${start} -- end - ${end} -- ans - ${ans} -- egg - ${egg} -- count - ${count}`;
-    elm.appendChild(chld);
+    var tbody = document.getElementById('table-body');
+    var tr = document.createElement('tr');
+    var td = document.createElement('td');
+    td.appendChild(document.createTextNode(count));
+    tr.appendChild(td);
+    td = document.createElement('td');
+    td.appendChild(document.createTextNode(start));
+    tr.appendChild(td);
+    td = document.createElement('td');
+    td.appendChild(document.createTextNode(end));
+    tr.appendChild(td);
+    td = document.createElement('td');
+    td.appendChild(document.createTextNode(egg));
+    tr.appendChild(td);
+    td = document.createElement('td');
+    td.appendChild(document.createTextNode(ans));
+    tr.appendChild(td);
+
+    tbody.appendChild(tr);
+
 }
