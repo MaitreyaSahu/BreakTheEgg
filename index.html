@@ -1,42 +1,67 @@
 <!DOCTYPE html />
-
-<html lang="en" >
+<html lang="en">
 <head>
-    <title></title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <script src="scripts.js" type="text/javascript"></script>
+    <title>Break The Egg</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script src="scripts.js" type="text/javascript"></script>
 </head>
 <body>
-<div class="container">
-<form>
-  <div class="form-group row">
-    <label class="col-sm-2 col-form-label">No of Eggs</label>
-    <div class="col-sm-10">
-      <input type="number" class="form-control" id="inputEggs" placeholder="No of Eggs">
+    <div class="container">
+    <h1 class="text-center">Break The Egg</h1>
+        <form>
+        <div class="form-group row">
+            <label class="col-md-2 col-form-label">
+                No of Eggs</label>
+            <div class="col-md-10">
+                <input type="number" class="form-control" id="inputEggs" placeholder="No of Eggs">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-md-2 col-form-label">
+                No of Floor</label>
+            <div class="col-md-10">
+                <input type="number" class="form-control" id="inputFloor" placeholder="No of Floor">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-md-2 col-form-label">
+                Ans</label>
+            <div class="col-md-10">
+                <input type="number" class="form-control" id="inputAns" placeholder="Ans">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-md-10">
+                <button type="button" class="btn btn-primary" onclick="run()">
+                    Run</button>
+            </div>
+        </div>
+        <table class="table table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>
+                        Test No
+                    </th>
+                    <th>
+                        Start
+                    </th>
+                    <th>
+                        End
+                    </th>
+                    <th>
+                        Egg
+                    </th>
+                    <th>
+                        Ans
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+            </tbody>
+        </table>        
+        </form>
     </div>
-  </div>
-  <div class="form-group row">
-    <label class="col-sm-2 col-form-label">No of Floor</label>
-    <div class="col-sm-10">
-      <input type="number" class="form-control" id="inputFloor" placeholder="No of Floor">
-    </div>
-  </div>
-  <div class="form-group row">
-    <label class="col-sm-2 col-form-label">Ans</label>
-    <div class="col-sm-10">
-      <input type="number" class="form-control" id="inputAns" placeholder="Ans">
-    </div>
-  </div>
-  <div class="form-group row">
-    <div class="col-sm-10">
-      <button type="button" class="btn btn-primary" onclick="run()" >Run</button>
-    </div>
-  </div>
-  <ul class="list-group" id="listLog">  
-</ul>
-</form>
-</div>
 </body>
 </html>
