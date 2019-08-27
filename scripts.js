@@ -1,8 +1,6 @@
 var count = 0;
 
 function run(){
-    var elm = document.getElementById('listLog');
-    elm.innerHTML = '';
     var tbody = document.getElementById('table-body');
     tbody.innerHTML = '';
 
