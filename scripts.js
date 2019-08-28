@@ -8,6 +8,8 @@ function run(){
     var end = +document.getElementById("inputFloor").value;
     var ans = +document.getElementById("inputAns").value;
     
+    count = 0;
+    
     noOfTestRequired(0, end, ans, egg);
 }
 
